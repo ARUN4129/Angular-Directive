@@ -1,0 +1,68 @@
+<!--            ***********   Angular Directives    **********      -->
+<!--
+    Basically There are Three Directives are mostaly used as follow
+    1)  *ngIf 
+    2)  *ngSwitch
+    3)  *ngFor
+
+    'Each Directive Starts with * (star) Symbol'
+
+    1]  By Hard Coded
+    2]  By Binding(Data)
+-->
+
+<h1>This is The Directive in Angular</h1>
+<hr>
+
+<h2>This is *ngIf</h2>
+<!--    Using *ngIf    -->
+<h1 *ngIf="true">Hello</h1><hr>
+
+<!--     Using *ngIf.....else       -->
+<h2>This is *ngIf...else</h2>
+<h1 *ngIf="flag; else othercode">Marvellous</h1>
+
+<ng-template #othercode>
+    <h1>Infosystem</h1>
+</ng-template><hr>
+
+
+
+<!--       Using *ngIf....then......else         -->
+<h2>This is *ngIf....then......else</h2>
+<h1 *ngIf="val; then firstcode; else secondcode">Garware College Pune</h1>
+
+<ng-template #firstcode>
+    <h1>Inside First Code</h1>
+</ng-template>
+
+<ng-template #secondcode>
+    <h1>Inside Second Code</h1>
+</ng-template><hr>
+
+
+
+<!--     Using *ngSwitch       -->
+<!--     It is Implemented by Hard-Coded       -->
+<h2>This is *ngSwitch</h2>
+<div [ngSwitch]="tmp">
+
+    
+    <h3 *ngSwitchCase="'One'">One</h3>
+    <h3 *ngSwitchCase="'Two'">Two</h3>
+    <h3 *ngSwitchCase="'Three'">Three</h3>
+    <h3 *ngSwitchCase="'Four'">Four</h3>
+    <h3 *ngSwitchCase="'Five'">Five</h3>
+
+
+    <h3 *ngSwitchDefault>Wrong Choice</h3>
+
+</div><hr>
+
+
+
+<!--    Using *ngFor        -->
+<h2>This is *ngFor</h2>
+<div *ngFor="let value of List">
+    <h2>{{value}}</h2>
+</div>
